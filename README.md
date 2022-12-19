@@ -1,6 +1,8 @@
 # nubank_home
 
-A new Flutter project.
+Seguindo as aulas do Renato Mota para aprender mais de design no Flutter.
+
+https://www.youtube.com/watch?v=46AJuWhKnsY&list=PLHAtJbrQ17AUH21bcdrA0HKP7OroUg2nI&ab_channel=RenatoMota
 
 ## Getting Started
 
