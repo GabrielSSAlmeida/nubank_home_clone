@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_home/pages/home/widgets/menu_app.dart';
 import 'package:nubank_home/pages/home/widgets/my_app_bar.dart';
 import 'package:nubank_home/pages/home/widgets/my_dots_app.dart';
 import 'package:nubank_home/pages/home/widgets/page_view_app.dart';
@@ -40,9 +41,13 @@ class _HomePageState extends State<HomePage> {
               setState(() {
                 _showMenu = !_showMenu;
                 _yPosition =
-                    _showMenu ? _screenHeigth * 0.75 : _screenHeigth * 0.20;
+                    _showMenu ? _screenHeigth * 0.80 : _screenHeigth * 0.20;
               });
             },
+          ),
+          MenuApp(
+            top: _screenHeigth * 0.18,
+            showMenu: _showMenu,
           ),
           PageViewApp(
             showMenu: _showMenu,
@@ -55,7 +60,7 @@ class _HomePageState extends State<HomePage> {
             },
             //Detecta um segura e arrasta - details arma
             onPanUpdate: (details) {
-              double positionBottomLimit = _screenHeigth * 0.75;
+              double positionBottomLimit = _screenHeigth * 0.80;
               double positionTopLimit = _screenHeigth * 0.20;
               double midlePostion =
                   (positionBottomLimit - positionTopLimit) / 2;
@@ -108,6 +113,7 @@ class _HomePageState extends State<HomePage> {
             },
           ),
           MyDotsApp(
+            showMenu: _showMenu,
             top: _screenHeigth * 0.74,
             currentIndex: _currentIndex,
           )
