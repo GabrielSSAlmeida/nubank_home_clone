@@ -11,9 +11,8 @@ class MyAppBar extends StatelessWidget {
       children: [
         SizedBox(
           //É um widget com tamanho especifico e seus filhos seguem esse tamanho (Pode colocar tamanho infinty)
-          height: MediaQuery.of(context)
-              .padding
-              .top, //StatusBar - É o tamanho da barra de itens do sistema(Barra do wifi)
+          height: MediaQuery.of(context).padding.top,
+          //StatusBar - É o tamanho da barra de itens do sistema(Barra do wifi)
         ),
         GestureDetector(
           //Detecta toques e outras interações do usuario com a tela
@@ -21,7 +20,7 @@ class MyAppBar extends StatelessWidget {
           child: Container(
             color: Colors.purple[800],
             height: MediaQuery.of(context).size.height *
-                0.20, //Responsivo - Deixar a altura 0.14 vzs o tamanho da tela
+                0.20, //Responsivo - Deixar a altura 0.20 vzs o tamanho da tela
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
