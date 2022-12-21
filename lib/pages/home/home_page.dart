@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_home/pages/home/widgets/item_menu_bottom.dart';
 import 'package:nubank_home/pages/home/widgets/menu_app.dart';
 import 'package:nubank_home/pages/home/widgets/my_app_bar.dart';
 import 'package:nubank_home/pages/home/widgets/my_dots_app.dart';
@@ -116,7 +117,64 @@ class _HomePageState extends State<HomePage> {
             showMenu: _showMenu,
             top: _screenHeigth * 0.74,
             currentIndex: _currentIndex,
-          )
+          ),
+          AnimatedPositioned(
+            duration: const Duration(milliseconds: 200),
+            //Agora nn ocupa a parte dos botoes de navegação
+            bottom: !_showMenu ? 0 + MediaQuery.of(context).padding.bottom : 0,
+            left: 0,
+            right: 0,
+            height: _screenHeigth * 0.15,
+            child: AnimatedOpacity(
+              duration: const Duration(milliseconds: 200),
+              opacity: !_showMenu ? 1 : 0,
+              child: Container(
+                child: ListView(
+                  physics: const BouncingScrollPhysics(),
+                  scrollDirection: Axis.horizontal,
+                  // ignore: prefer_const_literals_to_create_immutables
+                  children: [
+                    const ItemMenuBottom(
+                      icon: Icons.person_add,
+                      text: 'indicar amigos',
+                    ),
+                    const ItemMenuBottom(
+                      icon: Icons.phone_android,
+                      text: 'Recarga de celular',
+                    ),
+                    const ItemMenuBottom(
+                      icon: Icons.chat,
+                      text: 'Cobrar',
+                    ),
+                    const ItemMenuBottom(
+                      icon: Icons.monetization_on,
+                      text: 'Empréstimos',
+                    ),
+                    const ItemMenuBottom(
+                      icon: Icons.move_to_inbox,
+                      text: 'Depositar',
+                    ),
+                    const ItemMenuBottom(
+                      icon: Icons.mobile_screen_share,
+                      text: 'Transferir',
+                    ),
+                    const ItemMenuBottom(
+                      icon: Icons.format_align_center,
+                      text: 'Ajustar limite',
+                    ),
+                    const ItemMenuBottom(
+                      icon: Icons.chrome_reader_mode,
+                      text: 'Pagar',
+                    ),
+                    const ItemMenuBottom(
+                      icon: Icons.lock_open,
+                      text: 'Bloquar cartão',
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
         ],
       ), //Pilha - pega uma lista de widgets e os renderiza um em cima do outro
     );

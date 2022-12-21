@@ -18,7 +18,7 @@ class MenuApp extends StatelessWidget {
       left: 0,
       right: 0,
       child: AnimatedOpacity(
-        duration: const Duration(milliseconds: 200),
+        duration: const Duration(milliseconds: 100),
         opacity: showMenu ? 1 : 0,
         child: Container(
           height: MediaQuery.of(context).size.height * 0.65,

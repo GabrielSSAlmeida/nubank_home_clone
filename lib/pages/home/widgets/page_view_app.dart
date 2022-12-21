@@ -20,7 +20,7 @@ class PageViewApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedPositioned(
-      duration: const Duration(milliseconds: 300),
+      duration: const Duration(milliseconds: 150),
       curve: Curves.easeOut,
       top: top,
       height: MediaQuery.of(context).size.height * 0.55,
