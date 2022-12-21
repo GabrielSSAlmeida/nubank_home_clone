@@ -22,53 +22,54 @@ class MenuApp extends StatelessWidget {
         opacity: showMenu ? 1 : 0,
         child: Container(
           height: MediaQuery.of(context).size.height * 0.65,
-          child: Column(children: [
-            Image.network(
-              'https://webmobtuts.com/wp-content/uploads/2019/02/QR_code_for_mobile_English_Wikipedia.svg_.png',
-              height: 90,
-              color: Colors.white,
-            ),
-            //Para poder formatar de formas diferentes partes do texto
-            const Text.rich(
-              TextSpan(
-                  text: 'Banco ',
-                  children: [
-                    TextSpan(
-                        text: '260 - Nu Pagamentos S.A',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                  ],
-                  style: TextStyle(fontSize: 12)),
-            ),
+          child: SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            child: Column(children: [
+              Image.network(
+                'https://webmobtuts.com/wp-content/uploads/2019/02/QR_code_for_mobile_English_Wikipedia.svg_.png',
+                height: 120,
+                color: Colors.white,
+              ),
+              //Para poder formatar de formas diferentes partes do texto
+              const Text.rich(
+                TextSpan(
+                    text: 'Banco ',
+                    children: [
+                      TextSpan(
+                          text: '260 - Nu Pagamentos S.A',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                    ],
+                    style: TextStyle(fontSize: 12)),
+              ),
 
-            const SizedBox(height: 8),
+              const SizedBox(height: 8),
 
-            const Text.rich(
-              TextSpan(
-                  text: 'Agencia ',
-                  children: [
-                    TextSpan(
-                        text: '0001',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                  ],
-                  style: TextStyle(fontSize: 12)),
-            ),
+              const Text.rich(
+                TextSpan(
+                    text: 'Agencia ',
+                    children: [
+                      TextSpan(
+                          text: '0001',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                    ],
+                    style: TextStyle(fontSize: 12)),
+              ),
 
-            const SizedBox(height: 8),
+              const SizedBox(height: 8),
 
-            const Text.rich(
-              TextSpan(
-                  text: 'Conta ',
-                  children: [
-                    TextSpan(
-                        text: '000000-0',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                  ],
-                  style: TextStyle(fontSize: 12)),
-            ),
+              const Text.rich(
+                TextSpan(
+                    text: 'Conta ',
+                    children: [
+                      TextSpan(
+                          text: '000000-0',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                    ],
+                    style: TextStyle(fontSize: 12)),
+              ),
 
-            const SizedBox(height: 15),
-            SingleChildScrollView(
-              child: Padding(
+              const SizedBox(height: 15),
+              Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: Column(
                   // ignore: prefer_const_literals_to_create_immutables
@@ -120,8 +121,8 @@ class MenuApp extends StatelessWidget {
                   ],
                 ),
               ),
-            ),
-          ]),
+            ]),
+          ),
         ),
       ),
     );

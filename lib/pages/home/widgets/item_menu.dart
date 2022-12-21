@@ -15,7 +15,7 @@ class ItemMenu extends StatelessWidget {
         backgroundColor: Colors.purple[800], elevation: 0);
 
     return Container(
-      height: 35,
+      height: 40,
       decoration: const BoxDecoration(
         border: Border(
           bottom: BorderSide(width: 0.7, color: Colors.white),

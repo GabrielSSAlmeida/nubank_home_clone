@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CardApp extends StatelessWidget {
-  const CardApp({super.key});
+  final Widget child;
+
+  const CardApp({super.key, required this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -12,6 +14,7 @@ class CardApp extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
             color: Colors.white, borderRadius: BorderRadius.circular(5)),
+        child: child,
       ),
     );
   }

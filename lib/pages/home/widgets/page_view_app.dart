@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_home/pages/home/widgets/first_card.dart';
 
 import 'card_app.dart';
 
@@ -20,7 +21,7 @@ class PageViewApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedPositioned(
-      duration: const Duration(milliseconds: 150),
+      duration: const Duration(milliseconds: 250),
       curve: Curves.easeOut,
       top: top,
       height: MediaQuery.of(context).size.height * 0.55,
@@ -35,9 +36,11 @@ class PageViewApp extends StatelessWidget {
               ? const NeverScrollableScrollPhysics()
               : const BouncingScrollPhysics(),
           children: [
-            CardApp(),
-            CardApp(),
-            CardApp(),
+            CardApp(
+              child: FirstCard(),
+            ),
+            //CardApp(),
+            //CardApp(),
           ],
         ),
       ),
