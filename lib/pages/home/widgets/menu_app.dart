@@ -100,7 +100,7 @@ class MenuApp extends StatelessWidget {
                     ),
                     const SizedBox(height: 15),
                     Container(
-                      height: 35,
+                      height: 40,
                       width: double.infinity,
                       decoration: BoxDecoration(
                           border: Border.all(
@@ -112,7 +112,8 @@ class MenuApp extends StatelessWidget {
                             backgroundColor: Colors.purple[800], elevation: 0),
                         child: Text(
                           'SAIR DO APP',
-                          style: TextStyle(fontSize: 10),
+                          style: TextStyle(
+                              fontSize: 10, fontWeight: FontWeight.bold),
                         ),
                         //É obrigatorio passar a função, mesmo que nn use
                         onPressed: () {},

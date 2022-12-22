@@ -52,6 +52,11 @@ class _HomePageState extends State<HomePage> {
             showMenu: _showMenu,
           ),
           BottomMenu(showMenu: _showMenu),
+          MyDotsApp(
+            showMenu: _showMenu,
+            top: _screenHeigth * 0.74,
+            currentIndex: _currentIndex,
+          ),
           PageViewApp(
             showMenu: _showMenu,
             //Se tiver mostrando, desce se nao sobe
@@ -114,11 +119,6 @@ class _HomePageState extends State<HomePage> {
                 }
               });
             },
-          ),
-          MyDotsApp(
-            showMenu: _showMenu,
-            top: _screenHeigth * 0.74,
-            currentIndex: _currentIndex,
           ),
         ],
       ), //Pilha - pega uma lista de widgets e os renderiza um em cima do outro
