@@ -14,12 +14,6 @@ class ThirdCard extends StatefulWidget {
 class _ThirdCardState extends State<ThirdCard> {
   @override
   Widget build(BuildContext context) {
-    bool _buttomPressed = false;
-
-    initState() {
-      _buttomPressed = false;
-    }
-
     return Padding(
       padding: const EdgeInsets.all(30),
       child: Column(
